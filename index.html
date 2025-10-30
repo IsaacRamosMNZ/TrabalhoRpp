@@ -13,6 +13,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100%;
+            line-height: 1.6;
         }
 
         html {
@@ -29,125 +30,169 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
+            padding: 40px;
+            margin-bottom: 40px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
         .header h1 {
             color: #2c3e50;
-            font-size: 2.5rem;
-            margin: 0 0 10px 0;
+            font-size: 3rem;
+            margin: 0 0 15px 0;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .header p {
             color: #7f8c8d;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin: 0;
+            font-weight: 500;
         }
 
-        .nav-tabs {
-            display: flex;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            padding: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .nav-tab {
-            flex: 1;
-            min-width: 200px;
-            padding: 15px 20px;
-            background: #ecf0f1;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            color: #34495e;
-            transition: all 0.3s ease;
-        }
-
-        .nav-tab:hover {
-            background: #d5dbdb;
-            transform: translateY(-2px);
-        }
-
-        .nav-tab.active {
-            background: #3498db;
-            color: white;
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-        }
-
-        .content-section {
-            display: none;
+        .welcome-section {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
         }
 
-        .content-section.active {
-            display: block;
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .topic-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-left: 5px solid #3498db;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .topic-card h2 {
+        .welcome-section h2 {
             color: #2c3e50;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 600;
         }
 
-        .topic-card h3 {
-            color: #34495e;
-            font-size: 1.5rem;
-            margin: 25px 0 15px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #ecf0f1;
-        }
-
-        .topic-card p {
+        .welcome-section p {
             color: #555;
+            font-size: 1.2rem;
             line-height: 1.8;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
             text-align: justify;
         }
 
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .feature-card .icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .topic-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .topic-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .topic-header .icon {
+            font-size: 4rem;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .topic-header h2 {
+            color: #2c3e50;
+            font-size: 2.8rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .topic-content h3 {
+            color: #34495e;
+            font-size: 1.8rem;
+            margin: 35px 0 20px 0;
+            font-weight: 600;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .topic-content h3:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border-radius: 2px;
+        }
+
+        .topic-content p {
+            color: #555;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+            text-indent: 2rem;
+        }
+
         .references {
-            background: #e8f4f8;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 25px;
+            background: linear-gradient(135deg, #e8f4f8, #d5e8f0);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+            border-left: 5px solid #3498db;
         }
 
         .references h4 {
             color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
 
         .references ul {
@@ -157,130 +202,199 @@
 
         .references li {
             color: #555;
-            margin-bottom: 8px;
-            padding-left: 20px;
+            margin-bottom: 12px;
+            padding-left: 30px;
             position: relative;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .references li:before {
             content: "📚";
             position: absolute;
             left: 0;
+            font-size: 1.2rem;
+        }
+
+        .questions-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .questions-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .questions-header h2 {
+            color: #2c3e50;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .questions-header p {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .question-card {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px rgba(240, 147, 251, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(240, 147, 251, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .question-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 45px rgba(240, 147, 251, 0.4);
         }
 
         .question-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
+            font-size: 1.6rem;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            font-weight: 600;
         }
 
         .question-text {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
             font-size: 1.1rem;
-            line-height: 1.6;
+            line-height: 1.7;
+            backdrop-filter: blur(5px);
         }
 
         .answer-section {
             background: rgba(255, 255, 255, 0.95);
             color: #2c3e50;
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 15px;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
         }
 
         .answer-section h4 {
             color: #27ae60;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        .icon {
-            font-size: 2rem;
-        }
-
-        .welcome-section {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .welcome-section h2 {
-            color: #2c3e50;
-            font-size: 2.2rem;
             margin-bottom: 20px;
-        }
-
-        .welcome-section p {
-            color: #555;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .feature-card .icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .feature-card h3 {
-            margin-bottom: 10px;
             font-size: 1.3rem;
+            font-weight: 600;
         }
 
-        .feature-card p {
-            font-size: 1rem;
-            opacity: 0.9;
+        .answer-section p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .footer p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.4);
         }
 
         @media (max-width: 768px) {
-            .nav-tabs {
-                flex-direction: column;
-            }
-            
-            .nav-tab {
-                min-width: auto;
-            }
-            
-            .header h1 {
-                font-size: 2rem;
-            }
-            
             .container {
                 padding: 15px;
             }
             
-            .content-section {
-                padding: 25px;
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header p {
+                font-size: 1.1rem;
+            }
+            
+            .topic-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .topic-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .topic-section,
+            .welcome-section,
+            .questions-section {
+                padding: 30px 25px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .topic-content p {
+                text-indent: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .topic-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .welcome-section h2 {
+                font-size: 2rem;
+            }
+            
+            .questions-header h2 {
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -289,149 +403,95 @@
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
  </head>
  <body>
-  <div class="container">
+  <div class="container"><!-- Cabeçalho -->
    <header class="header">
     <h1 id="site-title">Portal Educacional de Ciências</h1>
     <p id="site-subtitle">Genética, Evolução, Física e Meio Ambiente</p>
-   </header>
-   <nav class="nav-tabs"><button class="nav-tab active" data-section="home">🏠 Início</button> <button class="nav-tab" data-section="genetics">🧬 Genética</button> <button class="nav-tab" data-section="evolution">🦕 Evolução</button> <button class="nav-tab" data-section="waves">🌊 Ondas</button> <button class="nav-tab" data-section="mechanics">⚙️ Mecânica</button> <button class="nav-tab" data-section="toxicology">☠️ Toxicologia</button> <button class="nav-tab" data-section="environment">🌍 Meio Ambiente</button> <button class="nav-tab" data-section="questions">📝 Questões de Vestibular</button>
-   </nav><!-- Seção Inicial -->
-   <section id="home" class="content-section active">
-    <div class="welcome-section">
-     <h2 id="welcome-message">Bem-vindos ao Portal Educacional de Ciências</h2>
-     <p>Este portal foi desenvolvido para oferecer conteúdo completo e detalhado sobre os principais temas de Biologia e Física. Aqui você encontrará teoria fundamentada, explicações claras e questões de vestibular resolvidas para aprofundar seus conhecimentos.</p>
-     <div class="features-grid">
-      <div class="feature-card">
-       <div class="icon">
-        🧬
-       </div>
-       <h3>Genética</h3>
-       <p>Estude hereditariedade, DNA, mutações e biotecnologia</p>
-      </div>
-      <div class="feature-card">
-       <div class="icon">
-        🦕
-       </div>
-       <h3>Evolução</h3>
-       <p>Compreenda seleção natural, especiação e biodiversidade</p>
-      </div>
-      <div class="feature-card">
-       <div class="icon">
-        🌊
-       </div>
-       <h3>Fenômenos Ondulatórios</h3>
-       <p>Explore ondas, som, luz e interferências</p>
-      </div>
-      <div class="feature-card">
-       <div class="icon">
-        ⚙️
-       </div>
-       <h3>Mecânica</h3>
-       <p>Domine cinemática, dinâmica e energia</p>
-      </div>
-      <div class="feature-card">
-       <div class="icon">
-        ☠️
-       </div>
-       <h3>Toxicologia</h3>
-       <p>Entenda efeitos de substâncias tóxicas</p>
-      </div>
-      <div class="feature-card">
-       <div class="icon">
-        🌍
-       </div>
-       <h3>Questões Ambientais</h3>
-       <p>Analise impactos ecológicos e sustentabilidade</p>
-      </div>
+   </header><!-- Seção de Boas-vindas -->
+   <section class="welcome-section">
+    <h2 id="welcome-message">Bem-vindos ao Portal Educacional de Ciências</h2>
+    <p>Este portal foi desenvolvido para oferecer conteúdo completo e detalhado sobre os principais temas de Biologia e Física. Aqui você encontrará teoria fundamentada, explicações claras e questões de vestibular resolvidas para aprofundar seus conhecimentos científicos.</p>
+    <div class="features-grid">
+     <div class="feature-card"><span class="icon">🧬</span>
+      <h3>Genética</h3>
+      <p>Estude hereditariedade, DNA, mutações e biotecnologia com conteúdo aprofundado e atualizado</p>
+     </div>
+     <div class="feature-card"><span class="icon">🦕</span>
+      <h3>Evolução</h3>
+      <p>Compreenda seleção natural, especiação e biodiversidade através de explicações detalhadas</p>
+     </div>
+     <div class="feature-card"><span class="icon">🌊</span>
+      <h3>Fenômenos Ondulatórios</h3>
+      <p>Explore ondas, som, luz e interferências com teoria e aplicações práticas</p>
+     </div>
+     <div class="feature-card"><span class="icon">⚙️</span>
+      <h3>Mecânica</h3>
+      <p>Domine cinemática, dinâmica e energia com fundamentos sólidos da física clássica</p>
+     </div>
+     <div class="feature-card"><span class="icon">☠️</span>
+      <h3>Toxicologia</h3>
+      <p>Entenda efeitos de substâncias tóxicas e mecanismos de ação no organismo</p>
+     </div>
+     <div class="feature-card"><span class="icon">🌍</span>
+      <h3>Questões Ambientais</h3>
+      <p>Analise impactos ecológicos e sustentabilidade com visão científica atual</p>
      </div>
     </div>
    </section><!-- Seção Genética -->
-   <section id="genetics" class="content-section">
-    <div class="topic-card">
-     <h2><span class="icon">🧬</span>Genética</h2>
+   <section class="topic-section">
+    <div class="topic-header"><span class="icon">🧬</span>
+     <h2>Genética</h2>
+    </div>
+    <div class="topic-content">
      <h3>Introdução</h3>
-     <p>A genética é a ciência que estuda a hereditariedade e a variação dos organismos vivos. Ela investiga como as características são transmitidas de pais para filhos através dos genes, que são segmentos de DNA contendo informações específicas. A genética moderna teve início com os trabalhos de Gregor Mendel no século XIX, estabelecendo as bases para compreendermos os mecanismos da herança biológica.</p>
+     <p>A genética é a ciência que estuda a hereditariedade e a variação dos organismos vivos. Ela investiga como as características são transmitidas de pais para filhos através dos genes, que são segmentos de DNA contendo informações específicas. A genética moderna teve início com os trabalhos pioneiros de Gregor Mendel no século XIX, estabelecendo as bases fundamentais para compreendermos os mecanismos complexos da herança biológica.</p>
      <h3>Desenvolvimento</h3>
-     <p>Os genes estão localizados nos cromossomos, estruturas presentes no núcleo celular. Cada gene ocupa uma posição específica chamada locus. Os alelos são formas alternativas de um mesmo gene, podendo ser dominantes ou recessivos. A expressão gênica resulta na síntese de proteínas através dos processos de transcrição (DNA → RNA) e tradução (RNA → proteína).</p>
-     <p>As leis de Mendel explicam os padrões básicos de herança: a Lei da Segregação (cada característica é determinada por dois fatores que se separam na formação dos gametas) e a Lei da Segregação Independente (genes para características diferentes segregam independentemente). Mutações são alterações na sequência do DNA que podem ser benéficas, neutras ou deletérias.</p>
-     <p>A biotecnologia moderna utiliza técnicas como PCR, sequenciamento de DNA, clonagem e engenharia genética para aplicações em medicina, agricultura e pesquisa. A terapia gênica busca tratar doenças através da correção de genes defeituosos.</p>
+     <p>Os genes estão localizados nos cromossomos, estruturas presentes no núcleo celular que carregam a informação hereditária. Cada gene ocupa uma posição específica chamada locus, e pode existir em diferentes formas denominadas alelos. Estes alelos podem ser dominantes (expressos mesmo em dose simples) ou recessivos (expressos apenas em dose dupla). A expressão gênica resulta na síntese de proteínas através dos processos coordenados de transcrição (DNA → RNA) e tradução (RNA → proteína).</p>
+     <p>As leis fundamentais de Mendel explicam os padrões básicos de herança: a Lei da Segregação estabelece que cada característica é determinada por dois fatores que se separam durante a formação dos gametas, enquanto a Lei da Segregação Independente demonstra que genes para características diferentes segregam independentemente uns dos outros. As mutações são alterações na sequência do DNA que podem ser benéficas (conferindo vantagens adaptativas), neutras (sem efeito aparente) ou deletérias (prejudiciais ao organismo).</p>
+     <p>A biotecnologia moderna revolucionou o campo genético, utilizando técnicas sofisticadas como PCR (Reação em Cadeia da Polimerase), sequenciamento de DNA de nova geração, clonagem molecular e engenharia genética para aplicações diversas em medicina, agricultura e pesquisa básica. A terapia gênica representa uma fronteira promissora, buscando tratar doenças através da correção de genes defeituosos ou da introdução de genes funcionais.</p>
      <h3>Conclusão</h3>
-     <p>A genética é fundamental para compreender a vida em nível molecular e tem revolucionado áreas como medicina personalizada, melhoramento genético e conservação de espécies. O conhecimento genético permite diagnosticar doenças hereditárias, desenvolver novos tratamentos e criar organismos geneticamente modificados para benefício da humanidade, sempre considerando aspectos éticos e de biossegurança.</p>
+     <p>A genética é fundamental para compreender a vida em nível molecular e tem revolucionado áreas como medicina personalizada, melhoramento genético de culturas e conservação de espécies ameaçadas. O conhecimento genético permite diagnosticar doenças hereditárias precocemente, desenvolver novos tratamentos direcionados e criar organismos geneticamente modificados para benefício da humanidade, sempre considerando rigorosamente aspectos éticos e de biossegurança.</p>
      <div class="references">
-      <h4>Referências</h4>
+      <h4>Referências Bibliográficas</h4>
       <ul>
        <li>GRIFFITHS, A. J. F. et al. Introdução à Genética. 11ª ed. Rio de Janeiro: Guanabara Koogan, 2016.</li>
        <li>WATSON, J. D. et al. Biologia Molecular do Gene. 7ª ed. Porto Alegre: Artmed, 2015.</li>
        <li>SNUSTAD, D. P.; SIMMONS, M. J. Fundamentos de Genética. 6ª ed. Rio de Janeiro: Guanabara Koogan, 2013.</li>
+       <li>ALBERTS, B. et al. Biologia Molecular da Célula. 6ª ed. Porto Alegre: Artmed, 2017.</li>
       </ul>
      </div>
     </div>
    </section><!-- Seção Evolução -->
-   <section id="evolution" class="content-section">
-    <div class="topic-card">
-     <h2><span class="icon">🦕</span>Evolução</h2>
+   <section class="topic-section">
+    <div class="topic-header"><span class="icon">🦕</span>
+     <h2>Evolução</h2>
+    </div>
+    <div class="topic-content">
      <h3>Introdução</h3>
-     <p>A evolução biológica é o processo pelo qual as espécies se modificam ao longo do tempo através de mudanças nas frequências alélicas das populações. Charles Darwin, em 1859, propôs a teoria da seleção natural como mecanismo principal da evolução, revolucionando nossa compreensão sobre a origem e diversidade da vida na Terra.</p>
+     <p>A evolução biológica é o processo fundamental pelo qual as espécies se modificam ao longo do tempo através de mudanças nas frequências alélicas das populações. Charles Darwin, em sua obra revolucionária "A Origem das Espécies" (1859), propôs a teoria da seleção natural como mecanismo principal da evolução, transformando completamente nossa compreensão sobre a origem e diversidade da vida na Terra.</p>
      <h3>Desenvolvimento</h3>
-     <p>A seleção natural atua sobre a variabilidade genética existente nas populações, favorecendo indivíduos com características vantajosas para sobrevivência e reprodução. Outros mecanismos evolutivos incluem deriva genética (mudanças aleatórias nas frequências alélicas), fluxo gênico (migração de genes entre populações) e mutação (fonte primária de variabilidade).</p>
-     <p>A especiação ocorre quando populações se tornam reprodutivamente isoladas, desenvolvendo diferenças genéticas suficientes para formar novas espécies. Pode ser alopátrica (isolamento geográfico), simpátrica (sem isolamento geográfico) ou parapátrica (isolamento parcial). A coevolução descreve a evolução conjunta de espécies que interagem ecologicamente.</p>
-     <p>Evidências evolutivas incluem fósseis, anatomia comparada, embriologia, biogeografia e dados moleculares. A árvore filogenética representa as relações evolutivas entre organismos. A evolução humana mostra nossa origem comum com outros primatas e as adaptações que nos tornaram únicos.</p>
+     <p>A seleção natural atua sobre a variabilidade genética existente nas populações, favorecendo sistematicamente indivíduos com características vantajosas para sobrevivência e reprodução em determinado ambiente. Além da seleção natural, outros mecanismos evolutivos importantes incluem a deriva genética (mudanças aleatórias nas frequências alélicas, especialmente em populações pequenas), o fluxo gênico (migração de genes entre populações diferentes) e a mutação (fonte primária de variabilidade genética).</p>
+     <p>A especiação é o processo pelo qual populações se tornam reprodutivamente isoladas, desenvolvendo diferenças genéticas suficientes para formar novas espécies distintas. Este processo pode ocorrer de diferentes formas: especiação alopátrica (com isolamento geográfico completo), especiação simpátrica (sem isolamento geográfico, comum em plantas) ou especiação parapátrica (com isolamento geográfico parcial). A coevolução descreve a evolução conjunta e interdependente de espécies que interagem ecologicamente, como predadores e presas ou plantas e polinizadores.</p>
+     <p>As evidências evolutivas são abundantes e diversificadas, incluindo registros fósseis que documentam mudanças ao longo do tempo geológico, anatomia comparada que revela homologias estruturais, embriologia comparada que mostra semelhanças no desenvolvimento, biogeografia que explica distribuições geográficas e dados moleculares que confirmam relações evolutivas. A árvore filogenética representa graficamente as relações evolutivas entre organismos, baseada em características compartilhadas.</p>
      <h3>Conclusão</h3>
-     <p>A teoria evolutiva unifica toda a biologia, explicando a diversidade da vida e as adaptações dos organismos aos seus ambientes. Compreender a evolução é essencial para áreas como medicina (resistência a antibióticos), conservação (preservação da biodiversidade) e biotecnologia (desenvolvimento de novos produtos). A evolução continua ocorrendo, sendo observável em tempo real em organismos com ciclos de vida curtos.</p>
+     <p>A teoria evolutiva unifica toda a biologia moderna, fornecendo o framework conceitual para explicar a impressionante diversidade da vida e as notáveis adaptações dos organismos aos seus ambientes específicos. Compreender a evolução é essencial para áreas aplicadas como medicina (compreensão da resistência a antibióticos), conservação biológica (preservação da biodiversidade e ecossistemas) e biotecnologia (desenvolvimento de novos produtos e processos). A evolução continua ocorrendo ativamente, sendo observável em tempo real em organismos com ciclos de vida curtos.</p>
      <div class="references">
-      <h4>Referências</h4>
+      <h4>Referências Bibliográficas</h4>
       <ul>
        <li>FUTUYMA, D. J.; KIRKPATRICK, M. Evolução. 4ª ed. Porto Alegre: Artmed, 2017.</li>
        <li>RIDLEY, M. Evolução. 3ª ed. Porto Alegre: Artmed, 2006.</li>
        <li>FREEMAN, S. et al. Análise Evolutiva. 5ª ed. Porto Alegre: Artmed, 2013.</li>
+       <li>DARWIN, C. A Origem das Espécies. São Paulo: Martin Claret, 2014.</li>
       </ul>
      </div>
     </div>
    </section><!-- Seção Fenômenos Ondulatórios -->
-   <section id="waves" class="content-section">
-    <div class="topic-card">
-     <h2><span class="icon">🌊</span>Fenômenos Ondulatórios</h2>
-     <h3>Introdução</h3>
-     <p>Os fenômenos ondulatórios são perturbações que se propagam através do espaço e do tempo, transportando energia sem transportar matéria. As ondas estão presentes em diversos aspectos da natureza, desde ondas mecânicas como o som até ondas eletromagnéticas como a luz, sendo fundamentais para compreender muitos processos físicos e tecnológicos.</p>
-     <h3>Desenvolvimento</h3>
-     <p>As ondas podem ser classificadas quanto à natureza (mecânicas ou eletromagnéticas), direção de vibração (transversais ou longitudinais) e dimensionalidade (unidimensionais, bidimensionais ou tridimensionais). Parâmetros importantes incluem amplitude (intensidade), frequência (número de oscilações por segundo), período (tempo de uma oscilação completa), comprimento de onda (distância entre pontos equivalentes) e velocidade de propagação.</p>
-     <p>Fenômenos ondulatórios incluem reflexão (mudança de direção ao encontrar obstáculo), refração (mudança de direção ao mudar de meio), interferência (superposição de ondas), difração (contorno de obstáculos) e polarização (orientação da vibração). A ressonância ocorre quando a frequência de excitação coincide com a frequência natural do sistema.</p>
-     <p>Aplicações práticas abrangem telecomunicações (ondas de rádio, micro-ondas), medicina (ultrassom, raios X), música (instrumentos musicais, acústica), óptica (lentes, fibras ópticas) e sismologia (ondas sísmicas). O efeito Doppler explica mudanças na frequência devido ao movimento relativo entre fonte e observador.</p>
-     <h3>Conclusão</h3>
-     <p>O estudo dos fenômenos ondulatórios é essencial para compreender desde fenômenos naturais até tecnologias modernas. As ondas conectam diferentes áreas da física e têm aplicações práticas que revolucionaram comunicações, medicina e entretenimento. O domínio desses conceitos é fundamental para o desenvolvimento tecnológico e científico contemporâneo.</p>
-     <div class="references">
-      <h4>Referências</h4>
-      <ul>
-       <li>HALLIDAY, D.; RESNICK, R.; WALKER, J. Fundamentos de Física: Óptica e Física Moderna. 10ª ed. Rio de Janeiro: LTC, 2016.</li>
-       <li>NUSSENZVEIG, H. M. Curso de Física Básica: Ótica, Relatividade, Física Quântica. 5ª ed. São Paulo: Blucher, 2014.</li>
-       <li>YOUNG, H. D.; FREEDMAN, R. A. Física IV: Ótica e Física Moderna. 14ª ed. São Paulo: Pearson, 2016.</li>
-      </ul>
-     </div>
+   <section class="topic-section">
+    <div class="topic-header"><span class="icon">🌊</span>
+     <h2>Fenômenos Ondulatórios</h2>
     </div>
-   </section><!-- Seção Mecânica -->
-   <section id="mechanics" class="content-section">
-    <div class="topic-card">
-     <h2><span class="icon">⚙️</span>Mecânica</h2>
+    <div class="topic-content">
      <h3>Introdução</h3>
-     <p>A mecânica é o ramo da física que estuda o movimento dos corpos e as forças que o causam. Dividida em cinemática (descrição do movimento), dinâmica (causas do movimento) e estática (equilíbrio), a mecânica fornece as bases para compreender desde o movimento de partículas até o funcionamento de máquinas complexas.</p>
+     <p>Os fenômenos ondulatórios representam perturbações que se propagam através do espaço e do tempo, transportando energia sem necessariamente transportar matéria. As ondas estão presentes em praticamente todos os aspectos da natureza e da tecnologia moderna, desde ondas mecânicas como o som e ondas sísmicas até ondas eletromagnéticas como a luz visível, ondas de rádio e raios X, sendo fundamentais para compreender muitos processos físicos e tecnológicos contemporâneos.</p>
      <h3>Desenvolvimento</h3>
-     <p>A cinemática descreve o movimento através de grandezas como posição, velocidade e aceleração, sem considerar suas causas. O movimento pode ser uniforme (velocidade constante) ou uniformemente variado (aceleração constante). Movimentos bidimensionais incluem lançamento oblíquo e movimento circular.</p>
-     <p>A dinâmica, baseada nas Leis de Newton, relaciona forças e movimento. A Primeira Lei (inércia) estabelece que corpos em repouso ou movimento retilíneo uniforme permanecem assim na ausência de forças. A Segunda Lei (F = ma) quantifica a relação entre força, massa e aceleração. A Terceira Lei (ação e reação) afirma que forças sempre ocorrem em pares.</p>
-     <p>Conceitos energéticos incluem trabalho (força aplicada ao longo de deslocamento), energia cinética (energia do movimento) e energia potencial (energia de posição). O princípio da conservação da energia estabelece que energia não pode ser criada nem destruída, apenas transformada. A potência mede a taxa de realização de trabalho.</p>
-     <h3>Conclusão</h3>
-     <p>A mecânica clássica permanece fundamental para engenharia, arquitetura e tecnologia. Seus princípios governam desde o projeto de veículos até a construção de edifícios e o funcionamento de máquinas. Embora limitada para velocidades próximas à da luz ou dimensões atômicas, a mecânica newtoniana continua sendo a base para a maioria das aplicações práticas do cotidiano.</p>
-     <div class="references">
-      <h4>Referências</h4>
-      <ul>
-       <li>HALLIDAY, D.; RESNICK, R.; WALKER, J. Fundamentos de Física: Mecânica. 10ª ed. Rio de Janeiro: LTC, 2016.</li>
-       <li>NUSSENZVEIG, H. M. Curso de Física Básica: Mecânica. 5ª ed. São Paulo: Blucher, 2013.</li>
-       <li>TIPLER, P. A.; MOSCA, G. Física para Cientistas e Engenheiros: Mecânica, Oscilações e Ondas. 6ª ed. Rio de Janeiro: LTC, 2009.</li>
-      </ul>
-     </div>
-    </div>
-   </section><!-- Seção Toxicologia -->
-   <section id="toxicology" class="content-section">
-    <div class="topic-card">
-     <h2><span class="icon">☠️</span>Toxicologia</h2>
-     <h3>Introdução</h3>
-     <p>A toxicologia é a ciência que estuda os efeitos adversos de substâncias químicas sobre organismos vivo
+     <p>As ondas podem ser classificadas de acordo com diferentes critérios: quanto à natureza física (mecânicas, que necessitam de meio material, ou eletromagnéticas, que se propagam no vácuo), quanto à di
